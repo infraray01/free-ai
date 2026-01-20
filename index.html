@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global AI Tools Directory By InfraRay - 1000+ Free AI Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+                    <div class="logo-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <div class="logo-text">Global AI Tools By InfraRay</div>
+                        <div class="logo-subtext">500+ FREE AI TOOLS & APIs</div>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Mobile Search Toggle -->
+            <button class="search-toggle" id="searchToggle">
+                <i class="fas fa-search"></i>
+            </button>
+            
+            <div class="search-container" id="searchContainer">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="searchInput" class="search-box" placeholder="Search 500+ AI tools & APIs...">
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" id="navHome"><i class="fas fa-home nav-icon"></i> Home</a></li>
+                    <li><a href="index.html#categories" id="navCategories"><i class="fas fa-th-large nav-icon"></i> AI Tools</a></li>
+                    <li><a href="api.html" id="navAPIs"><i class="fas fa-code nav-icon"></i> Free APIs</a></li>
+                    <li><a href="index.html#suggestions" id="navSuggest"><i class="fas fa-lightbulb nav-icon"></i> Suggestions</a></li>
+                    <li><a href="index.html#reviews" id="navReviews"><i class="fas fa-star nav-icon"></i> Reviews</a></li>
+                    <li><a href="index.html#faq1" id="navFAQ"><i class="fas fa-question-circle nav-icon"></i> FAQ</a></li>
+                    <li><a href="index.html#submit" id="navSubmit"><i class="fas fa-plus nav-icon"></i> Submit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>The World's Largest Directory of <span style="color: var(--primary)">100% Legitimate</span> Free AI Tools</h1>
+            <p>Discover, compare, and use the best free AI tools from around the globe. Every tool listed is verified, legitimate, and offers a free tier. No fake data, no misleading information.</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">AI Tools</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Verified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free AI APIs Section -->
+    <section class="api-section">
+        <div class="container">
+            <div class="api-header">
+                <h2><i class="fas fa-code api-icon"></i> Free AI APIs for Developers</h2>
+                <p>Build with these <strong>100% free</strong> AI APIs. No credit card required, no hidden fees.</p>
+                <a href="api.html" class="api-link-btn">
+                    <i class="fas fa-external-link-alt"></i> Explore All Free APIs
+                </a>
+            </div>
+            
+            <div class="api-highlights">
+                <div class="api-card highlight">
+                    <div class="api-icon-bg">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Google Gemini API</h3>
+                    <p>Free: 60 requests/minute</p>
+                    <span class="api-tag free">100% Free</span>
+                    <a href="api.html#gemini" class="api-card-link">View Details →</a>
+                </div>
+                
+                
+                
+                <div class="api-card highlight">
+                    <div class="api-icon-bg">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Hugging Face Inference</h3>
+                    <p>Free API access</p>
+                    <span class="api-tag free">Open Source</span>
+                    <a href="api.html#huggingface" class="api-card-link">View Details →</a>
+                </div>
+                
+                <div class="api-card highlight">
+                    <div class="api-icon-bg">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>AssemblyAI</h3>
+                    <p>Free speech-to-text</p>
+                    <span class="api-tag free">5 hours free/month</span>
+                    <a href="api.html#assemblyai" class="api-card-link">View Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All Tools</button>
+                    <button class="filter-btn" data-filter="free">Free Only</button>
+                    <button class="filter-btn" data-filter="popular">Most Popular</button>
+                    <button class="filter-btn" data-filter="new">Recently Added</button>
+                </div>
+                
+                <div class="tools-count">
+                    Showing <strong id="showingCount">0</strong> of <strong id="totalCount">500+</strong> legitimate AI tools
+                </div>
+                
+                <div class="sort-options">
+                    <select id="sortFilter" class="filter-select">
+                        <option value="featured">Sort: Featured</option>
+                        <option value="name">Sort: A to Z</option>
+                        <option value="popular">Sort: Most Popular</option>
+                        <option value="new">Sort: Newest</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Suggestions -->
+            <section class="suggestions" id="suggestions">
+                <h3><i class="fas fa-lightbulb"></i> Not Sure Where to Start?</h3>
+                <p>Based on what's popular right now and user recommendations:</p>
+                <div class="suggestion-list" id="suggestionList">
+                    <!-- Suggestions dynamically added -->
+                </div>
+            </section>
+            <!-- Category Navigation -->
+    <section class="category-nav" id="categories">
+        <div class="container">
+            <div class="category-scroll">
+                <button class="cat-btn active" data-category="all">
+                    <i class="fas fa-layer-group cat-icon"></i> All Tools
+                </button>
+                <button class="cat-btn" data-category="text">
+                    <i class="fas fa-keyboard cat-icon"></i> Text & Writing
+                </button>
+                <button class="cat-btn" data-category="image">
+                    <i class="fas fa-palette cat-icon"></i> Image & Art
+                </button>
+                <button class="cat-btn" data-category="audio">
+                    <i class="fas fa-music cat-icon"></i> Audio & Music
+                </button>
+                <button class="cat-btn" data-category="video">
+                    <i class="fas fa-video cat-icon"></i> Video
+                </button>
+                <button class="cat-btn" data-category="code">
+                    <i class="fas fa-code cat-icon"></i> Code & Dev
+                </button>
+                <button class="cat-btn" data-category="research">
+                    <i class="fas fa-flask cat-icon"></i> Research & Data
+                </button>
+                <button class="cat-btn" data-category="productivity">
+                    <i class="fas fa-tasks cat-icon"></i> Productivity
+                </button>
+                <button class="cat-btn" data-category="education">
+                    <i class="fas fa-graduation-cap cat-icon"></i> Education
+                </button>
+                <button class="cat-btn" data-category="translation">
+                    <i class="fas fa-language cat-icon"></i> Translation
+                </button>
+                <button class="cat-btn" data-category="search">
+                    <i class="fas fa-search cat-icon"></i> Search
+                </button>
+                <button class="cat-btn" data-category="specialized">
+                    <i class="fas fa-tools cat-icon"></i> Specialized
+                </button>
+                <button class="cat-btn" data-category="platforms">
+                    <i class="fas fa-cloud cat-icon"></i> Platforms
+                </button>
+                <button class="cat-btn" data-category="directories">
+                    <i class="fas fa-folder-tree cat-icon"></i> Directories
+                </button>
+                <button class="cat-btn" data-category="global">
+                    <i class="fas fa-globe cat-icon"></i> Global
+                </button>
+            </div>
+        </div>
+    </section>
+
+            <!-- Tools Grid -->
+            <div class="tools-grid" id="toolsGrid">
+                <!-- AI Tools will be dynamically loaded here -->
+                <div class="loading" id="loadingIndicator">
+                    <div class="spinner"></div>
+                    <p>Loading legitimate AI tools from around the world...</p>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i> Load More AI Tools
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="reviews-header">
+                <h2><i class="fas fa-star"></i> What Our Users Say</h2>
+                <p>Join 10,000+ developers, students, and creators using our directory daily</p>
+            </div>
+            
+            <div class="reviews-slider">
+                <div class="reviews-track" id="reviewsTrack">
+                    <!-- Reviews will be dynamically added -->
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq1">
+        <div class="container">
+            <div class="faq-header">
+                <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                <p>Get answers to common questions about AI tools and APIs</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-check-circle"></i> Are these tools really free?</h3>
+                    <p>Yes! Every tool listed offers a legitimate free tier. Some may have usage limits, but all can be used without payment.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-shield-alt"></i> How are tools verified?</h3>
+                    <p>We test each tool personally, check documentation, verify free tier availability, and monitor for policy changes.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-sync-alt"></i> How often is the list updated?</h3>
+                    <p>We update daily. New tools are added, existing tools are re-verified, and discontinued tools are removed.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-code"></i> Can I use APIs for commercial projects?</h3>
+                    <p>Most free APIs allow commercial use within their limits. Check individual terms for specific restrictions.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-globe"></i> Do you list international tools?</h3>
+                    <p>Yes! We feature AI tools from 30+ countries, including non-English tools with translation guides.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-plus-circle"></i> Can I submit a tool?</h3>
+                    <p>Absolutely! Use our submission form. We'll verify and add legitimate free AI tools within 48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Global AI Tools Directory</h3>
+                    <p>The world's most comprehensive and verified directory of legitimate free AI tools. Every tool is hand-verified to ensure it's real, accessible, and offers a free tier.</p>
+                    <p>Our mission: Democratize AI access by helping everyone find the perfect free AI tool for their needs.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Top Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-category="text">Text & Writing AI</a></li>
+                        <li><a href="#" data-category="image">Image Generation</a></li>
+                        <li><a href="#" data-category="audio">Audio & Music AI</a></li>
+                        <li><a href="#" data-category="code">Code & Developer Tools</a></li>
+                        <li><a href="#" data-category="research">Research & Data Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#reviews">User Reviews</a></li>
+                        <li><a href="api.html#guides">API Getting Started</a></li>
+                        <li><a href="api.html#faq">API FAQ</a></li>
+                        <li><a href="#">Submit a Tool</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="api.html">Free APIs</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                        <li><a href="#">AI News & Updates</a></li>
+                        <li><a href="#">Developer Resources</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Global AI Tools Directory by InfraRay. All tools listed are legitimate and verified. Information is updated regularly.</p>
+                <p>Disclaimer: While we verify all tools, some may change their pricing or availability. Always check the official website for the most current information.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tools-data.js"></script>
+</body>
+</html>
