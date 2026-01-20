@@ -535,19 +535,101 @@ function loadTools() {
 }
 
 // Load more tools
+// Load more tools - SMOOTH VERSION
 function loadMoreTools() {
-    if (!loadMoreBtn) return;
+    if (!loadMoreBtn || !toolsGrid) return;
     
-    loadMoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
-    loadMoreBtn.disabled = true;
+    // Save current scroll position
+    const currentScroll = window.scrollY;
     
     // Increase visible tools count
     visibleToolsCount += 12;
     
-    // Reload tools with new count
+    // Filter tools based on current criteria
+    let filteredTools = allTools.filter(tool => {
+        // Filter by category
+        if (currentCategory !== 'all' && tool.category !== currentCategory) {
+            return false;
+        }
+        
+        // Filter by filter type
+        if (currentFilter === 'free' && !tool.free) {
+            return false;
+        }
+        
+        if (currentFilter === 'popular' && !tool.popular) {
+            return false;
+        }
+        
+        // Filter by search term
+        if (currentSearch) {
+            const searchLower = currentSearch.toLowerCase();
+            const matchesName = tool.name.toLowerCase().includes(searchLower);
+            const matchesDescription = tool.description.toLowerCase().includes(searchLower);
+            const matchesTags = tool.tags.some(tag => tag.toLowerCase().includes(searchLower));
+            
+            if (!matchesName && !matchesDescription && !matchesTags) {
+                return false;
+            }
+        }
+        
+        return true;
+    });
+    
+    // Sort tools
+    filteredTools = sortTools(filteredTools, currentSort);
+    
+    // Get only the NEW tools to add
+    const currentToolCount = toolsGrid.querySelectorAll('.tool-card:not(.empty-state)').length;
+    const newTools = filteredTools.slice(currentToolCount, visibleToolsCount);
+    
+    if (newTools.length === 0) {
+        // No more tools to load
+        if (loadMoreBtn) {
+            loadMoreBtn.style.display = 'none';
+        }
+        return;
+    }
+    
+    // Add small visual feedback
+    loadMoreBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+    loadMoreBtn.classList.add('loading');
+    
+    // Add new tools with animation
     setTimeout(() => {
-        loadTools();
-    }, 500);
+        newTools.forEach((tool, index) => {
+            const toolCard = createToolCard(tool, currentToolCount + index);
+            toolsGrid.appendChild(toolCard);
+            
+            // Trigger animation
+            setTimeout(() => {
+                toolCard.style.opacity = '1';
+                toolCard.style.transform = 'translateY(0)';
+            }, index * 50); // Staggered animation
+        });
+        
+        // Update showing count
+        if (showingCount) {
+            showingCount.textContent = Math.min(currentToolCount + newTools.length, filteredTools.length);
+        }
+        
+        // Check if there are more tools to load
+        if (currentToolCount + newTools.length >= filteredTools.length) {
+            loadMoreBtn.style.display = 'none';
+        } else {
+            loadMoreBtn.innerHTML = '<i class="fas fa-plus"></i> Load More AI Tools';
+            loadMoreBtn.classList.remove('loading');
+        }
+        
+        // Maintain scroll position
+        setTimeout(() => {
+            window.scrollTo({
+                top: currentScroll,
+                behavior: 'auto'
+            });
+        }, 10);
+        
+    }, 10); // Small delay for visual feedback
 }
 
 // Sort tools based on selected criteria
